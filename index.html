@@ -128,13 +128,20 @@
       </div>
       
       <!-- UPDATED FORM WITH SUCCESS URL -->
-      <form class="notify-form" name="signup" method="POST" netlify-honeypot="bot-field" action="/success.html" data-netlify="true" data-netlify-success-url="/success.html">
-        <input type="hidden" name="bot-field">
-        <input type="text" name="name" placeholder="Your name" class="search-bar">
-        <input type="email" name="email" placeholder="Enter your email to get notified" class="search-bar" required>
-        <input type="hidden" name="form-name" value="signup">
-        <button type="submit" class="btn">Notify Me</button>
-      </form>
+      
+<form id="notify-form" class="notify-form">
+  <input type="text" name="name" placeholder="Your name" class="search-bar" required>
+  <input type="email" name="email" placeholder="Enter your email to get notified" class="search-bar" required>
+  <button type="submit" class="btn">Notify Me</button>
+</form>
+
+<script>
+  document.getElementById("notify-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    window.location.href = "success.html";
+  });
+</script>
+
     </div>
   </section>
 
@@ -214,16 +221,19 @@
         <div class="footer-section">
           <h4 class="footer-heading">Follow Us</h4>
           <div class="social-links">
-            <a href="https://www.instagram.com/musiclibrary.ug?igsh=ZDNhaHA2dGk5cTRl&utm_source=qr" class="social-link" target="_blank" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://x.com/musiclibraryug?s=21" class="social-link" target="_blank" aria-label="X">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="https://www.facebook.com/share/18v9NzagcK/?mibextid=wwXIfr" class="social-link" target="_blank" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </div>
+  <a href="https://www.instagram.com/musiclibrary.ug?igsh=ZDNhaHA2dGk5cTRl&utm_source=qr" class="social-link" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://x.com/musiclibraryug?s=21" class="social-link" target="_blank" aria-label="X">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+  <a href="https://www.facebook.com/share/18v9NzagcK/?mibextid=wwXIfr" class="social-link" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://www.tiktok.com/@musiclibrary.ug?_t=ZM-8wU3ciZHEK0&_r=1" class="social-link" target="_blank" aria-label="TikTok">
+    <i class="fab fa-tiktok"></i>
+  </a>
+</div>
         </div>
         
         <div class="footer-section">
