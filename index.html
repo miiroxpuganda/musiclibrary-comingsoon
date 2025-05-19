@@ -4,428 +4,85 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Music Library Uganda | Premium Music Experience</title>
-  <meta name="description" content="The ultimate destination for high-quality Ugandan music—featuring all artists, all genres, and exclusive DJ playlists. Stream free, anytime, anywhere.">
+  <meta name="description" content="The ultimate destination for high-quality Ugandan music—featuring all artists, all genres, and exclusive DJ playlists. Stream or download free, anytime, anywhere.">
   <meta name="author" content="Music Library Uganda">
   
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
   
   <!-- Fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Custom CSS -->
+  <!-- Futuristic Neon/Gradient Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Additional CSS for Form -->
   <style>
-    :root {
-      --primary-color: #000;
-      --secondary-color: #333;
-      --accent-color: #0071e3;
-      --light-bg: #f5f5f7;
-      --dark-bg: #111;
-      --text-light: #f5f5f7;
-      --text-dark: #1d1d1f;
-      --spacing-xs: 8px;
-      --spacing-sm: 16px;
-      --spacing-md: 24px;
-      --spacing-lg: 48px;
-      --spacing-xl: 96px;
-      --transition: all 0.3s ease;
+    /* Fix for the form layout */
+    .notify-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      max-width: 460px;
+      margin: 40px auto 0;
     }
     
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      line-height: 1.5;
-      color: var(--text-dark);
-      background-color: var(--light-bg);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: 600;
-      letter-spacing: -0.015em;
-    }
-    
-    /* Header */
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(0, 0, 0, 0.8);
-      backdrop-filter: saturate(180%) blur(20px);
-      -webkit-backdrop-filter: saturate(180%) blur(20px);
-      z-index: 1000;
-      padding: var(--spacing-sm) 0;
-    }
-    
-    .container {
+    .notify-form .search-bar {
       width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 var(--spacing-md);
-    }
-    
-    .header .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: var(--text-light);
-      text-decoration: none;
-      letter-spacing: -0.01em;
-      transition: var(--transition);
-    }
-    
-    .logo:hover {
-      opacity: 0.8;
-    }
-    
-    .header-contact {
-      color: var(--text-light);
-      text-decoration: none;
-      font-size: 0.875rem;
-      display: flex;
-      align-items: center;
-      transition: var(--transition);
-    }
-    
-    .header-contact i {
-      margin-right: var(--spacing-xs);
-    }
-    
-    .header-contact:hover {
-      color: var(--accent-color);
-    }
-    
-    /* Hero section */
-    .hero {
-      background-color: var(--dark-bg);
-      color: var(--text-light);
-      padding-top: calc(80px + var(--spacing-xl));
-      padding-bottom: var(--spacing-xl);
-      text-align: center;
-      background-image: linear-gradient(180deg, #000 0%, #222 100%);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -100px;
-      left: 0;
-      right: 0;
-      height: 200px;
-      background: linear-gradient(180deg, transparent 0%, var(--light-bg) 100%);
-    }
-    
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: var(--spacing-md);
-      background: linear-gradient(90deg, #fff 0%, #e2e2e2 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
-    .hero p {
-      font-size: 1.25rem;
+      padding: 12px 18px;
+      border-radius: 10px !important;
+      border: none;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--white, #ffffff);
+      font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 17px;
       font-weight: 400;
-      max-width: 600px;
-      margin: 0 auto var(--spacing-lg);
-      color: #999;
+      letter-spacing: -0.022em;
     }
     
-    /* Countdown */
-    .countdown {
-      display: flex;
-      justify-content: center;
-      margin: var(--spacing-lg) 0;
+    .notify-form .search-bar:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 0 4px rgba(0, 125, 250, 0.15);
     }
     
-    .countdown-item {
-      margin: 0 var(--spacing-md);
-      text-align: center;
-    }
-    
-    .countdown-value {
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1;
-      color: var(--text-light);
-      margin-bottom: var(--spacing-xs);
-    }
-    
-    .countdown-label {
-      font-size: 0.875rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #999;
-    }
-    
-    /* Features section */
-    .features {
-      padding: var(--spacing-xl) 0;
-      background-color: white;
-    }
-    
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--spacing-md);
-      margin-top: var(--spacing-lg);
-    }
-    
-    .feature-card {
-      background-color: var(--light-bg);
-      border-radius: 16px;
-      padding: var(--spacing-md);
-      text-align: center;
-      transition: var(--transition);
-      height: 100%;
-    }
-    
-    .feature-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-    }
-    
-    .feature-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 70px;
-      height: 70px;
-      background-color: var(--accent-color);
+    .notify-form .btn {
+      background: var(--accent-blue, #0066cc);
       color: white;
-      border-radius: 50%;
-      font-size: 1.5rem;
-      margin: 0 auto var(--spacing-md);
-    }
-    
-    .feature-card h3 {
-      margin-bottom: var(--spacing-sm);
-      font-size: 1.25rem;
-    }
-    
-    .feature-card p {
-      color: #666;
-      font-size: 0.9375rem;
-      line-height: 1.6;
-    }
-    
-    /* Team section */
-    .team {
-      padding: var(--spacing-xl) 0;
-      background-color: var(--light-bg);
-    }
-    
-    .section-heading {
-      text-align: center;
-      margin-bottom: var(--spacing-lg);
-    }
-    
-    .section-heading h2 {
-      font-size: 2.5rem;
-      margin-bottom: var(--spacing-xs);
-      color: var(--text-dark);
-    }
-    
-    .section-heading p {
-      font-size: 1.125rem;
-      color: #666;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    .team-member {
-      background-color: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-      max-width: 360px;
-      margin: 0 auto;
-      transition: var(--transition);
-    }
-    
-    .team-member:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
-    }
-    
-    .team-photo {
+      font-size: 17px;
+      font-weight: 400;
+      padding: 12px 24px;
+      border-radius: 10px;
+      border: none;
+      letter-spacing: -0.022em;
+      transition: background-color 0.2s ease;
       width: 100%;
-      height: 360px;
-      object-fit: cover;
+      margin-top: 8px;
     }
     
-    .team-details {
-      padding: var(--spacing-md);
-      text-align: center;
+    .notify-form .btn:hover {
+      background-color: #0077ed;
     }
     
-    .team-name {
-      font-size: 1.5rem;
-      margin-bottom: var(--spacing-xs);
-      color: var(--text-dark);
+    @media (min-width: 768px) {
+      .notify-form {
+        width: 100%;
+      }
     }
     
-    .team-title {
-      font-size: 1rem;
-      color: #666;
-      margin-bottom: var(--spacing-sm);
-    }
-    
-    .team-bio {
-      font-style: italic;
-      color: #666;
-      margin-bottom: var(--spacing-sm);
-      line-height: 1.6;
-    }
-    
-    .social-links {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-    }
-    
-    .social-links li {
-      margin: 0 var(--spacing-xs);
-    }
-    
-    .social-links a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: var(--light-bg);
-      color: var(--secondary-color);
-      font-size: 1.125rem;
-      transition: var(--transition);
-    }
-    
-    .social-links a:hover {
-      background-color: var(--accent-color);
-      color: white;
-    }
-    
-    /* CTA */
-    .cta {
-      background-color: var(--dark-bg);
-      padding: var(--spacing-lg) 0;
-      text-align: center;
-      color: var(--text-light);
-      background-image: linear-gradient(135deg, #111 0%, #333 100%);
-    }
-    
-    .cta h3 {
-      font-size: 2rem;
-      margin-bottom: var(--spacing-sm);
-    }
-    
-    .cta-text {
-      max-width: 600px;
-      margin: 0 auto var(--spacing-md);
-      font-size: 1.125rem;
-      color: #999;
-    }
-    
-    .btn {
-      display: inline-block;
-      padding: var(--spacing-sm) var(--spacing-md);
-      background-color: var(--accent-color);
-      color: white;
-      border-radius: 50px;
-      font-weight: 500;
+    /* Fix for social media icons */
+    .social-link {
       text-decoration: none;
-      transition: var(--transition);
+      border: none;
+      outline: none;
     }
     
-    .btn:hover {
-      background-color: #0062c4;
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(0, 113, 227, 0.4);
-    }
-    
-    /* Footer */
-    .footer {
-      background-color: var(--dark-bg);
-      color: #888;
-      padding: var(--spacing-md) 0;
-      font-size: 0.875rem;
-    }
-    
-    .footer .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .footer a {
-      color: var(--text-light);
+    .social-link i {
+      line-height: 1;
       text-decoration: none;
-      transition: var(--transition);
-    }
-    
-    .footer a:hover {
-      color: var(--accent-color);
-    }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      
-      .countdown-value {
-        font-size: 2rem;
-      }
-      
-      .footer .container {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .footer .copyright {
-        margin-bottom: var(--spacing-sm);
-      }
-    }
-    
-    @media (max-width: 576px) {
-      .header .container {
-        flex-direction: column;
-      }
-      
-      .logo {
-        margin-bottom: var(--spacing-xs);
-      }
-      
-      .hero h1 {
-        font-size: 2rem;
-      }
-      
-      .countdown {
-        flex-wrap: wrap;
-      }
-      
-      .countdown-item {
-        margin: var(--spacing-xs);
-      }
+      border: none;
     }
   </style>
 </head>
@@ -434,86 +91,103 @@
   <header class="header">
     <div class="container">
       <a href="#" class="logo">Music Library Uganda</a>
-      <a href="https://wa.me/256750451374" class="header-contact" target="_blank">
-        <i class="fab fa-whatsapp"></i> Contact: +256 750 451374
-      </a>
+      <div class="header-contacts">
+        <a href="mailto:info@musiclibrary.ug" class="header-contact">
+          <i class="fas fa-envelope"></i> info@musiclibrary.ug
+        </a>
+        <a href="https://wa.me/256750451374" class="header-contact">
+          <i class="fab fa-whatsapp"></i> +256 750 451374
+        </a>
+      </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero-area">
     <div class="container">
       <h1>Uganda's Ultimate<br>Music Experience</h1>
-      <p>Your gateway to high-quality music featuring ALL Ugandan artists, ALL genres, and exclusive DJ playlists — completely FREE.</p>
+      <p>Your gateway to high-quality music featuring ALL Ugandan artists, ALL genres, and exclusive DJ playlists — stream or download completely FREE.</p>
       
-      <!-- Countdown -->
       <div class="countdown">
-        <div class="countdown-item">
-          <div class="countdown-value" id="days">365</div>
-          <div class="countdown-label">Days</div>
+        <div class="single-count-content">
+          <div class="count" id="days">--</div>
+          <div class="text">Days</div>
         </div>
-        <div class="countdown-item">
-          <div class="countdown-value" id="hours">24</div>
-          <div class="countdown-label">Hours</div>
+        <div class="single-count-content">
+          <div class="count" id="hours">--</div>
+          <div class="text">Hours</div>
         </div>
-        <div class="countdown-item">
-          <div class="countdown-value" id="minutes">60</div>
-          <div class="countdown-label">Minutes</div>
+        <div class="single-count-content">
+          <div class="count" id="minutes">--</div>
+          <div class="text">Minutes</div>
         </div>
-        <div class="countdown-item">
-          <div class="countdown-value" id="seconds">60</div>
-          <div class="countdown-label">Seconds</div>
+        <div class="single-count-content">
+          <div class="count" id="seconds">--</div>
+          <div class="text">Seconds</div>
         </div>
       </div>
+      
+      <!-- UPDATED FORM WITH SUCCESS URL -->
+      <form class="notify-form" name="signup" method="POST" netlify-honeypot="bot-field" action="/success.html" data-netlify="true" data-netlify-success-url="/success.html">
+        <input type="hidden" name="bot-field">
+        <input type="text" name="name" placeholder="Your name" class="search-bar">
+        <input type="email" name="email" placeholder="Enter your email to get notified" class="search-bar" required>
+        <input type="hidden" name="form-name" value="signup">
+        <button type="submit" class="btn">Notify Me</button>
+      </form>
     </div>
   </section>
 
   <!-- Features Section -->
   <section class="features">
     <div class="container">
-      <div class="section-heading">
-        <h2>Premium Features, Zero Cost</h2>
-        <p>We're building something revolutionary for Ugandan music lovers</p>
+      <div class="section-title">
+        <h1>Premium Features</h1>
+        <h2>Why You'll Love Us</h2>
       </div>
       
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-music"></i>
-          </div>
+          <div class="feature-icon"><i class="fas fa-music"></i></div>
           <h3>Complete Music Library</h3>
           <p>Access ALL Ugandan artists from legends to emerging talents — the most comprehensive collection ever assembled.</p>
         </div>
         
         <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-headphones-alt"></i>
-          </div>
+          <div class="feature-icon"><i class="fas fa-headphones-alt"></i></div>
           <h3>Superior Audio Quality</h3>
           <p>Experience crystal-clear sound quality that brings out every detail in your favorite tracks.</p>
         </div>
         
         <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-compact-disc"></i>
-          </div>
+          <div class="feature-icon"><i class="fas fa-compact-disc"></i></div>
           <h3>Exclusive DJ Playlists</h3>
           <p>Enjoy carefully curated playlists from Uganda's top DJs, refreshed weekly and completely free.</p>
         </div>
         
         <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-podcast"></i>
-          </div>
+          <div class="feature-icon"><i class="fas fa-podcast"></i></div>
           <h3>ALL Genres</h3>
           <p>From Kadongo Kamu to Afrobeats, Lugaflow to Gospel — discover music across every Ugandan genre.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-download"></i></div>
+          <h3>Download High-Quality MP3s</h3>
+          <p>Take your music offline with high-quality MP3 downloads. Build your collection and listen anywhere.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Works Everywhere</h3>
+          <p>Stream or download on any device — your music follows you everywhere you go!</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="cta">
+  <section class="cta-section">
     <div class="container">
       <h3>Worth Every Second of Wait</h3>
       <p class="cta-text">We're meticulously crafting an extraordinary music experience. High-quality audio, comprehensive library, and exclusive DJ playlists — all completely free. Join our waitlist and be the first to experience Uganda's premium music platform.</p>
@@ -522,83 +196,79 @@
       </a>
     </div>
   </section>
-        </div>
-      </div>
-      
-      <div class="teaser-image">
-        <!-- Placeholder for an image -->
-        <div class="device-mockup">
-          <div class="device-screen">
-            <div class="device-content">
-              <div class="mockup-header">
-                <div class="mockup-title">Now Playing</div>
-              </div>
-              <div class="mockup-cover"></div>
-              <div class="mockup-controls">
-                <div class="mockup-song">Ugandan Masterpiece</div>
-                <div class="mockup-artist">Premium Artist</div>
-                <div class="mockup-progress"></div>
-                <div class="mockup-buttons">
-                  <div class="mockup-button prev"></div>
-                  <div class="mockup-button play"></div>
-                  <div class="mockup-button next"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="copyright">
-        <p>&copy; 2025 Music Library Uganda. All rights reserved.</p>
-      </div>
-      <div class="credit">
-        <p>Powered by <a href="https://musiclibrary.ug" rel="nofollow">MusicLibrary.ug</a></p>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4 class="footer-heading">Contact Us</h4>
+          <a href="mailto:info@musiclibrary.ug" class="footer-link">
+            <i class="fas fa-envelope"></i> info@musiclibrary.ug
+          </a>
+          <a href="https://wa.me/256750451374" class="footer-link">
+            <i class="fab fa-whatsapp"></i> +256 750 451374
+          </a>
+        </div>
+        
+        <div class="footer-section">
+          <h4 class="footer-heading">Follow Us</h4>
+          <div class="social-links">
+            <a href="https://www.instagram.com/musiclibrary.ug?igsh=ZDNhaHA2dGk5cTRl&utm_source=qr" class="social-link" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/musiclibraryug?s=21" class="social-link" target="_blank" aria-label="X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/share/18v9NzagcK/?mibextid=wwXIfr" class="social-link" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <div class="footer-copyright">
+            &copy; 2025 Music Library Uganda. All Rights Reserved.
+          </div>
+          <div class="launch-date">
+            <span>Launch Date:</span> September 1, 2025
+          </div>
+        </div>
       </div>
     </div>
   </footer>
-
-  <!-- Scripts -->
+  
+  <!-- Countdown JavaScript -->
   <script>
-    // Countdown Timer
-    const countDownDate = new Date("Jan 1, 2026").getTime();
+    // Set the launch date: September 1, 2025
+    const launchDate = new Date("September 1, 2025 00:00:00").getTime();
     
-    const updateCountdown = () => {
+    // Update the countdown every second
+    const countdown = setInterval(function() {
+      // Get today's date and time
       const now = new Date().getTime();
-      const distance = countDownDate - now;
       
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      // Find the time remaining between now and the launch date
+      const timeRemaining = launchDate - now;
       
+      // Calculate days, hours, minutes and seconds
+      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+      
+      // Display the result
       document.getElementById("days").innerHTML = days;
       document.getElementById("hours").innerHTML = hours;
       document.getElementById("minutes").innerHTML = minutes;
       document.getElementById("seconds").innerHTML = seconds;
-    };
-    
-    // Initial call
-    updateCountdown();
-    
-    // Update every second
-    setInterval(updateCountdown, 1000);
-    
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
+      
+      // If the countdown is finished, display a message
+      if (timeRemaining < 0) {
+        clearInterval(countdown);
+        document.getElementById("countdown").innerHTML = "<h2>We're Live!</h2>";
+      }
+    }, 1000);
   </script>
 </body>
 </html>
