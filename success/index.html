@@ -27,6 +27,8 @@
       --gradient-mid: #a5b4f3;
       --gradient-end: #d2d5f9;
       --accent-blue: #0066cc;
+      /* Apple's beautiful gradient */
+      --apple-gradient: linear-gradient(108deg,#0894FF,#C959DD 34%,#FF2E54 68%,#FF9004);
     }
     
     * {
@@ -110,7 +112,7 @@
       font-size: 48px;
       font-weight: 600;
       margin-bottom: 20px;
-      background: linear-gradient(to right, var(--white), var(--gradient-start), var(--gradient-mid));
+      background: var(--apple-gradient);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -168,7 +170,7 @@
     
     .social-link:hover {
       transform: translateY(-5px);
-      background: var(--accent-blue);
+      background: var(--apple-gradient);
     }
     
     .social-link i {

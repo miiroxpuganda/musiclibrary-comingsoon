@@ -14,6 +14,8 @@
   --gradient-end: #d2d5f9;
   --accent-blue: #0066cc;
   --accent-pink: #d5081a;
+  /* Apple's beautiful gradient */
+  --apple-gradient: linear-gradient(108deg,#0894FF,#C959DD 34%,#FF2E54 68%,#FF9004);
 }
 
 /* Base Styles */
@@ -73,7 +75,7 @@ h1 {
   font-weight: 600;
   line-height: 1.1;
   margin-bottom: 20px;
-  background: linear-gradient(to right, var(--white), var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+  background: var(--apple-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -324,6 +326,24 @@ ul, ol {
   background-color: #0077ed;
 }
 
+/* Add gradient button option */
+.gradient-btn {
+  background: var(--apple-gradient);
+  color: white;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  letter-spacing: -0.022em;
+  transition: all 0.3s ease;
+}
+
+.gradient-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
+}
+
 .common-btn {
   position: relative;
   overflow: hidden;
@@ -359,7 +379,7 @@ ul, ol {
   font-size: 26px;
   font-weight: 500;
   margin-bottom: 20px;
-  background: var(--white);
+  background: var(--apple-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -402,7 +422,7 @@ ul, ol {
   margin: 0 auto 25px;
   font-size: 30px;
   border-radius: 50%;
-  background: linear-gradient(45deg, var(--accent-blue), var(--gradient-start));
+  background: var(--apple-gradient);
   color: var(--white);
 }
 
@@ -427,7 +447,7 @@ ul, ol {
 .cta-section h3 {
   font-size: 36px;
   margin-bottom: 20px;
-  background: linear-gradient(to right, var(--white), var(--gradient-start));
+  background: var(--apple-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -502,7 +522,7 @@ ul, ol {
 }
 
 .social-link:hover {
-  background: var(--accent-blue);
+  background: var(--apple-gradient);
   transform: translateY(-5px);
 }
 
@@ -576,4 +596,13 @@ ul, ol {
   .cta-section h3 {
     font-size: 28px;
   }
+}
+
+/* Gradient Text Helper Class */
+.gradient-text {
+  background: var(--apple-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
